@@ -1,0 +1,6 @@
+/images/nginx/vhost.conf
+/storage/mongo/**/*
+/storage/mysql/**/*
+/storage/memcached/**/*
+.env
+/share

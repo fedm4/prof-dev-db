@@ -1,0 +1,12 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.6
+    volumes:
+      - ./../storage/mysql:/docker-entry-point-initdb.d
+      - ${APP_PATH}/php-docker-boilerplate/share:/var/share
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    command: "mysqld --sql-mode=NO_ENGINE_SUBSTITUTION"
+    ports:
+      - ${MYSQL_PORT}:3306
